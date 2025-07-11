@@ -1,3 +1,6 @@
+/* Import responsive design system */
+@import './styles/responsive.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

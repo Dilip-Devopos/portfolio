@@ -171,13 +171,11 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-gray-800">
-
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-12 sm:py-16 md:py-20 bg-white dark:bg-gray-800">
+      <div className="max-w-7xl mx-auto responsive-container">
         <ScrollAnimatedSection animation="fadeInUp" delay={100}>
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16">
+            <h2 className="responsive-text-3xl md:responsive-text-4xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
               Get In Touch
               {/* Animated Communication Icons */}
               <div className="absolute -top-6 -right-12 hidden lg:block">
@@ -200,15 +198,15 @@ const Contact: React.FC = () => {
           </div>
         </ScrollAnimatedSection>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12">
           {/* Contact Form */}
           <ScrollAnimatedSection animation="fadeInLeft" delay={200}>
-            <div className="bg-gray-50 dark:bg-gray-700 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+            <div className="bg-gray-50 dark:bg-gray-700 rounded-2xl p-4 sm:p-6 md:p-8">
+              <h3 className="responsive-text-xl md:responsive-text-2xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
                 Send a Message
               </h3>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                       Your Name

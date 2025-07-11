@@ -74,23 +74,24 @@ const TechStack: React.FC = () => {
           </div>
         </ScrollAnimatedSection>
 
-        {/* Category Filters */}
+        {/* Category Filters - Enhanced Mobile Layout */}
         <ScrollAnimatedSection animation="fadeInUp" delay={200}>
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mb-8 sm:mb-12 px-2">
             {TECH_DATA.categories.map((category) => {
             const IconComponent = category.icon;
             return (
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
-                className={`flex items-center gap-2 px-6 py-3 rounded-full font-medium transition-all duration-200 ${
+                className={`touch-target flex items-center gap-1 sm:gap-2 px-3 sm:px-4 md:px-6 py-2 sm:py-3 rounded-full font-medium transition-all duration-200 responsive-text-sm sm:responsive-text-base ${
                   activeCategory === category.id
                     ? 'bg-blue-600 dark:bg-white text-white dark:text-gray-900 shadow-lg'
                     : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
                 }`}
               >
-                <IconComponent className="h-5 w-5" />
-                {category.name}
+                <IconComponent className="h-4 w-4 sm:h-5 sm:w-5" />
+                <span className="hidden xs:inline sm:inline">{category.name}</span>
+                <span className="xs:hidden sm:hidden">{category.name.split(' ')[0]}</span>
               </button>
             );
             })}
@@ -99,27 +100,27 @@ const TechStack: React.FC = () => {
 
         {/* Technology Grid */}
         <ScrollAnimatedSection animation="fadeInUp" delay={300}>
-          <div className="min-h-[300px] flex items-center justify-center">
+          <div className="min-h-[250px] sm:min-h-[300px] flex items-center justify-center px-2">
           {filteredTechnologies.length > 0 ? (
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 w-full">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4 md:gap-6 w-full">
               {filteredTechnologies.map((tech, index) => {
                 const IconComponent = tech.icon;
                 return (
                   <div
                     key={tech.name}
-                    className="group relative bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 dark:border-gray-700 animate-fade-in"
+                    className="group relative bg-white dark:bg-gray-800 rounded-xl p-3 sm:p-4 md:p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100 dark:border-gray-700 animate-fade-in touch-target"
                     style={{ animationDelay: `${index * 100}ms` }}
                   >
                     <div className="flex flex-col items-center text-center">
-                      <div className={`w-16 h-16 ${tech.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-200`}>
-                        <IconComponent className="h-8 w-8 text-white" />
+                      <div className={`w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 ${tech.color} rounded-xl flex items-center justify-center mb-2 sm:mb-3 md:mb-4 group-hover:scale-110 transition-transform duration-200`}>
+                        <IconComponent className="h-5 w-5 sm:h-6 sm:w-6 md:h-8 md:w-8 text-white" />
                       </div>
-                      <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+                      <h3 className="font-semibold text-gray-900 dark:text-white mb-1 sm:mb-2 responsive-text-sm sm:responsive-text-base">
                         {tech.name}
                       </h3>
-                      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                      <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1.5 sm:h-2">
                         <div
-                          className="bg-blue-600 dark:bg-white h-2 rounded-full transition-all duration-1000 delay-300"
+                          className="bg-blue-600 dark:bg-white h-1.5 sm:h-2 rounded-full transition-all duration-1000 delay-300"
                           style={{ width: `${Math.floor(Math.random() * 30) + 70}%` }}
                         ></div>
                       </div>

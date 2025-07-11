@@ -90,38 +90,38 @@ const Hero: React.FC = () => {
         </button>
       </div>
 
-      {/* Content - Left Corner */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-start">
-        <div className="w-full max-w-2xl mt-32">
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+      {/* Content - Responsive Layout */}
+      <div className="relative z-10 max-w-7xl mx-auto responsive-container h-full flex items-start">
+        <div className="w-full max-w-2xl mt-20 sm:mt-24 md:mt-28 lg:mt-32">
+          <h1 className="responsive-text-4xl md:responsive-text-5xl lg:responsive-text-6xl xl:responsive-text-7xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6 leading-tight">
             <span className="block animate-slide-in-left" style={{ animationDelay: '0.2s' }}>
               Dilip Kumar
             </span>
-            <span className="block text-gray-700 dark:text-gray-300">
+            <span className="block text-gray-700 dark:text-gray-300 responsive-text-3xl md:responsive-text-4xl lg:responsive-text-5xl xl:responsive-text-6xl">
               DevOps Engineer
             </span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-gray-800 dark:text-white mb-8 leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+          <p className="responsive-text-lg md:responsive-text-xl lg:responsive-text-2xl text-gray-800 dark:text-white mb-6 sm:mb-8 leading-relaxed animate-fade-in-up max-w-2xl" style={{ animationDelay: '0.6s' }}>
             <span className="inline-block animate-typewriter">DevOps Engineer • CI/CD Specialist</span>
             <br />
-            <span className="text-lg text-blue-700 dark:text-blue-300 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
+            <span className="responsive-text-base md:responsive-text-lg text-blue-700 dark:text-blue-300 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
               Transforming enterprise infrastructure with cutting-edge automation and scalable solutions
             </span>
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-in-up" style={{ animationDelay: '1s' }}>
+          {/* CTA Buttons - Enhanced for Mobile */}
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12 animate-fade-in-up" style={{ animationDelay: '1s' }}>
             <a
               href="#projects"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
+              className="touch-target bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl responsive-text-base"
             >
               View My Projects
             </a>
 
             <a
               href="#contact"
-              className="bg-transparent border-2 border-gray-800 dark:border-white text-gray-800 dark:text-white hover:bg-gray-800 dark:hover:bg-white hover:text-white dark:hover:text-gray-900 px-8 py-3 rounded-lg font-semibold transition-all duration-200 text-center"
+              className="touch-target bg-transparent border-2 border-gray-800 dark:border-white text-gray-800 dark:text-white hover:bg-gray-800 dark:hover:bg-white hover:text-white dark:hover:text-gray-900 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold transition-all duration-200 text-center responsive-text-base"
             >
               Let's Connect
             </a>
