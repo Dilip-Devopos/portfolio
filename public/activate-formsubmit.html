@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activate FormSubmit - Portfolio Contact Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        input:focus, textarea:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .info {
+            background-color: #e7f3ff;
+            border: 1px solid #b3d9ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .success {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Activate FormSubmit for Portfolio</h1>
+        
+        <div class="info">
+            <strong>📧 Activation Required:</strong><br>
+            This form will activate FormSubmit.co for your portfolio contact form.<br>
+            After submitting, FormSubmit will be ready to send emails to <strong>dilipbca99@gmail.com</strong>
+        </div>
+
+        <!-- FormSubmit Activation Form -->
+        <form action="https://formsubmit.co/2c2fbf23f8d790dc32674b62e3b5128c" method="POST">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" value="Dilip Portfolio Admin" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" value="dilipbca99@gmail.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" value="FormSubmit Activation Test" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required>This is a test message to activate FormSubmit.co for the portfolio contact form. After this submission, the contact form will be ready to send emails to dilipbca99@gmail.com.</textarea>
+            </div>
+
+            <!-- FormSubmit Configuration -->
+            <input type="hidden" name="_next" value="https://formsubmit.co/thankyou">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+
+            <button type="submit">🚀 Activate FormSubmit</button>
+        </form>
+
+        <div class="success" style="display: none;" id="success-message">
+            <strong>✅ Success!</strong><br>
+            FormSubmit has been activated! Your portfolio contact form is now ready to send emails.
+        </div>
+    </div>
+
+    <script>
+        // Show success message if redirected back
+        if (window.location.search.includes('success')) {
+            document.getElementById('success-message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

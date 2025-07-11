@@ -1,0 +1,134 @@
+# 🚀 Portfolio .gitignore
+# Comprehensive gitignore for React TypeScript Vite portfolio project
+
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Build outputs
+dist/
+dist-ssr/
+build/
+out/
+.output/
+
+# Logs
+logs/
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+.nyc_output
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Vite cache
+.vite/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swp
+*.swo
+*~
+
+# AWS deployment temporary files
+awscliv2.zip
+aws/
+bucket-policy.json
+
+# Deployment artifacts
+*.zip
+*.tar.gz
+
+# OS generated files
+Thumbs.db
+.DS_Store
+
+# Temporary folders
+tmp/
+temp/
+.cache/
+.parcel-cache/
+
+# Testing
+/coverage
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Vercel
+.vercel
+
+# Netlify
+.netlify
+
+# Turbo
+.turbo
+
+# Local development
+.local
+
+# Keep important files (whitelist with !)
+!README.md
+!LICENSE
+!.github/
+!public/
+!src/
+!*.md
+!*.sh
+!*.json
+!*.ts
+!*.tsx
+!*.css
+!*.html
+!.gitkeep
