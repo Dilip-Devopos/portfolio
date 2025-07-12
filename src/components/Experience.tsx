@@ -42,15 +42,16 @@ const Experience: React.FC = () => {
       logo: 'https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop',
       certificateUrl: '/devops_cert.png',
       description: 'Comprehensive DevOps certification covering CI/CD pipelines, containerization, cloud platforms, and infrastructure automation. This certification validates expertise in modern DevOps practices, including continuous integration, continuous deployment, infrastructure as code, and cloud-native technologies.',
-      skills: ['Docker & Kubernetes', 'AWS Cloud Services', 'Jenkins CI/CD', 'Terraform IaC', 'Monitoring & Logging', 'GitOps', 'Microservices Architecture', 'Security Best Practices'],
+      skills: ['Docker & Kubernetes', 'AWS Cloud Services', 'Jenkins CI/CD', 'Terraform IaC', 'Grafana & Prometheus', 'Ansible', 'Microservices Architecture', 'Git','Linux'],
       validUntil: 'Lifetime',
-      credentialId: 'DEVOPS-2025-001',
+      credentialId: 'DEVOPS',
       achievements: [
         'Successfully completed 40+ hours of hands-on DevOps training',
         'Demonstrated proficiency in container orchestration with Kubernetes',
-        'Built and deployed scalable CI/CD pipelines using Jenkins and GitLab',
-        'Implemented Infrastructure as Code using Terraform and Ansible',
-        'Configured monitoring and alerting systems with Prometheus and Grafana'
+        'Built and deployed scalable CI/CD pipelines using Jenkins and aws ci/cd',
+        'Implemented Infrastructure as Code using Terraform',
+        'Configured monitoring and alerting systems with Prometheus Grafana & Cloudwatch',
+        'Implemented security best practices in DevOps workflows'
       ],
       learningOutcomes: [
         'Design and implement robust CI/CD pipelines',
@@ -59,8 +60,8 @@ const Experience: React.FC = () => {
         'Implement security best practices in DevOps workflows',
         'Monitor and troubleshoot distributed systems effectively'
       ],
-      projectsCompleted: 5,
-      totalHours: 120,
+      projectsCompleted: 3,
+      totalHours: 180,
       grade: 'A+',
       verificationUrl: 'https://v2.zenclass.in/certificate'
     }
@@ -340,7 +341,7 @@ const Experience: React.FC = () => {
                     <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Certificate Details</h4>
                     <div className="space-y-3 text-sm">
                       <div className="flex justify-between">
-                        <span className="text-gray-600 dark:text-gray-400">Credential ID:</span>
+                        <span className="text-gray-600 dark:text-gray-400">Course Name :</span>
                         <span className="text-gray-900 dark:text-white font-mono text-xs">
                           {selectedCertificate?.credentialId}
                         </span>
