@@ -63,7 +63,7 @@ const Experience: React.FC = () => {
       projectsCompleted: 3,
       totalHours: 180,
       grade: 'A+',
-      verificationUrl: 'https://v2.zenclass.in/certificate'
+      verificationUrl: 'https://v2.zenclass.in/certificateDownload/g6qH1zkKxKcjcYYJ'
     }
   ];
 
